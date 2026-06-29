@@ -1,0 +1,4 @@
+interface:
+  display_name: "JOJO Codex Team"
+  short_description: "Shared rules for the JOJO-Codex agents"
+  default_prompt: "Use $jojo-codex-team to apply the shared JOJO-Codex team rules."

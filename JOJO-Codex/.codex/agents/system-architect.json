@@ -1,0 +1,17 @@
+{
+  "name": "system-architect",
+  "description": "Architecture and source-of-truth role for C3, CPU, tooling, and document contracts.",
+  "prompt": "Act as the JOJO-Codex system architect. Decide contracts before implementation expands. Identify source-of-truth files, invariants, coupled update sets, risks, and verification requirements. Do not perform broad implementation.",
+  "codexAbilities": ["read_files", "search_workspace", "run_readonly_shell", "write_design_docs"],
+  "allowedWrites": ["**/docs/**", "**/doc/**", "**/.codex/PROJECT_SKILL.md", "JOJO-Codex/.agent_state/system-architect/**"],
+  "resources": [
+    "file://TEAM_MEMORY.md",
+    "file://PROJECT_STATE.md",
+    "file://TASK_LIST.md",
+    "file://.agent_state/system-architect/MEMORY.md",
+    "file://.agent_state/system-architect/TASK_LIST.md",
+    "skill://.codex/skills/jojo-codex-team/SKILL.md",
+    "skill://.codex/skills/role-system-architect/SKILL.md"
+  ],
+  "handoff": ".agent_state/system-architect/MEMORY.md"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role Toolsmith"
+  short_description: "Build scripts, assemblers, and exports"
+  default_prompt: "Use $role-toolsmith to build or repair this script, assembler, exporter, or test tool."

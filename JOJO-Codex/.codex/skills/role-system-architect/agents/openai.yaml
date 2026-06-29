@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role System Architect"
+  short_description: "Decide architecture and source-of-truth"
+  default_prompt: "Use $role-system-architect to make the architecture decision and source-of-truth map."

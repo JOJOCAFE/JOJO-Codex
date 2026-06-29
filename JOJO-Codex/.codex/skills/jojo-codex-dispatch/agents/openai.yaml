@@ -1,0 +1,4 @@
+interface:
+  display_name: "JOJO Codex Dispatch"
+  short_description: "Route Codex work to the right specialist"
+  default_prompt: "Use $jojo-codex-dispatch to route this Codex workspace task to the right agent."

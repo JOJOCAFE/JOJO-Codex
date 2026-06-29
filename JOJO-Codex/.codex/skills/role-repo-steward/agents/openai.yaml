@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role Repo Steward"
+  short_description: "Maintain repo state, memory, and handoffs"
+  default_prompt: "Use $role-repo-steward to update task plans, repo docs, memory notes, or handoffs."

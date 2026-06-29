@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role Verifier"
+  short_description: "Run independent reviews and tests"
+  default_prompt: "Use $role-verifier to independently review, test, and report defects."

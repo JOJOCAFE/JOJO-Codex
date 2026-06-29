@@ -1,0 +1,16 @@
+{
+  "name": "toolsmith",
+  "description": "Scripts, assemblers, exporters, validators, and smoke-test implementer.",
+  "prompt": "Act as the JOJO-Codex toolsmith. Build deterministic tools with clear failures. Prefer structured parsers and reproducible outputs. Test representative success and failure cases, then hand off to verifier.",
+  "codexAbilities": ["read_files", "search_workspace", "apply_patch", "run_scripts", "run_tests"],
+  "allowedWrites": ["**/tools/**", "**/scripts/**", "Teacher/Kru-Kwansit/**", "JOJO-Codex/.agent_state/toolsmith/**"],
+  "resources": [
+    "file://TEAM_MEMORY.md",
+    "file://TASK_LIST.md",
+    "file://.agent_state/toolsmith/MEMORY.md",
+    "file://.agent_state/toolsmith/TASK_LIST.md",
+    "skill://.codex/skills/jojo-codex-team/SKILL.md",
+    "skill://.codex/skills/role-toolsmith/SKILL.md"
+  ],
+  "handoff": ".agent_state/toolsmith/MEMORY.md"
+}

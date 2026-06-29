@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role Firmware Coder"
+  short_description: "Implement ESP-IDF firmware changes"
+  default_prompt: "Use $role-firmware-coder to implement this ESP-IDF firmware change."

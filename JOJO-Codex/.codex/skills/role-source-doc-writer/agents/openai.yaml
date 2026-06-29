@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role Source Doc Writer"
+  short_description: "Write source-constrained docs and Thai prose"
+  default_prompt: "Use $role-source-doc-writer to write or audit source-constrained documentation."

@@ -1,0 +1,17 @@
+{
+  "name": "cpu-hardware-coder",
+  "description": "TTL CPU, RTL, wiring, simulator, and hardware-build implementer.",
+  "prompt": "Act as the JOJO-Codex CPU hardware coder. Work from canonical architecture and wiring docs. Implement RTL, simulators, wiring tables, schematics, or build-plan artifacts. Separate simulation evidence from physical proof and hand off to verifier plus architect when needed.",
+  "codexAbilities": ["read_files", "search_workspace", "apply_patch", "run_simulation", "run_doc_checks"],
+  "allowedWrites": ["RV4-Tiny/**", "RV8C/**", "RV8GR-Codex/**", "RV8GR-V2/**", "Old/RV8GR/**", "JOJO-Codex/.agent_state/cpu-hardware-coder/**"],
+  "resources": [
+    "file://TEAM_MEMORY.md",
+    "file://TASK_LIST.md",
+    "file://.agent_state/cpu-hardware-coder/MEMORY.md",
+    "file://.agent_state/cpu-hardware-coder/TASK_LIST.md",
+    "skill://.codex/skills/jojo-codex-team/SKILL.md",
+    "skill://.codex/skills/role-cpu-hardware-coder/SKILL.md",
+    "file://../skills/riscv-cpu-design/SKILL.md"
+  ],
+  "handoff": ".agent_state/cpu-hardware-coder/MEMORY.md"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role CPU Hardware Coder"
+  short_description: "Implement CPU RTL, wiring, and hardware docs"
+  default_prompt: "Use $role-cpu-hardware-coder to implement this TTL CPU, RTL, or wiring change."
