@@ -16,6 +16,7 @@ the JOJOCAFE-Org practice.
 - [x] Create root team docs.
 - [x] Create agent configs and memory stubs.
 - [x] Run skill validation.
+- [x] Push initial JOJO-Codex organization to GitHub.
 - [ ] Decide whether to install any skills globally.
 - [ ] Decide first project-local deployment target.
 

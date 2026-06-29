@@ -15,6 +15,7 @@ Bootstrap `JOJO-Codex` as a Codex-native agent organization for the projects in
 - Per-person memory and task-list files created.
 - All 10 skill folders passed `quick_validate.py`.
 - All 8 agent JSON files passed `python3 -m json.tool`.
+- Pushed to `git@github.com:JOJOCAFE/JOJO-Codex.git` on branch `master`.
 - This folder is reviewable and portable; it is not installed globally.
 
 ## Current Decisions
@@ -27,14 +28,15 @@ Bootstrap `JOJO-Codex` as a Codex-native agent organization for the projects in
 | 2026-06-29 | Keep non-author verification as the core quality gate. |
 | 2026-06-29 | Adopt the team ethos: professional genius, excellent work, and making the world better through useful, verifiable projects. |
 | 2026-06-29 | Make Pim the normal single command entry point; specialists may raise concerns directly to Pim or Jo. |
+| 2026-06-29 | Keep JOJO-Codex portable in this repo for now; install or copy project-local versions only after user review. |
 
 ## Next Actions
 
-1. Review the role map in `AGENTS.md`.
-2. If approved, copy selected skills into a project or into `$CODEX_HOME/skills`.
-3. For each active repo, create a smaller project-local `PROJECT_STATE.md` and
+1. Review the role map in `AGENTS.md` when the team model is next used.
+2. If approved later, copy selected skills into a project or into `$CODEX_HOME/skills`.
+3. For each active repo later, create a smaller project-local `PROJECT_STATE.md` and
    trim `TEAM_MEMORY.md` to that repo's facts.
-4. Add first real defect reports only after verifier findings exist.
+4. Add first real defect reports only after real verifier findings exist.
 
 ## Known Limits
 

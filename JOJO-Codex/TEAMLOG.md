@@ -12,3 +12,9 @@
 - Set Pim as the normal single command entry point.
 - Established direct concern channel: any team member may speak frankly to Pim
   or directly to Jo.
+- Validated all 10 skills and all 8 agent JSON files.
+- Committed and pushed the initial organization to
+  `git@github.com:JOJOCAFE/JOJO-Codex.git` on branch `master`.
+- Closeout note: JOJO-Codex remains portable in `/home/jo/Codex/JOJO-Codex`.
+  Project-local installation and global skill installation are intentionally
+  left as later review decisions.

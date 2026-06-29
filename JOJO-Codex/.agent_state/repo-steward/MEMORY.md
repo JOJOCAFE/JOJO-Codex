@@ -6,7 +6,10 @@
   perspective.
 - Confirm each subproject's repo root before git operations.
 - Persistent memory updates require an explicit user request.
+- Initial JOJO-Codex commit was pushed to
+  `git@github.com:JOJOCAFE/JOJO-Codex.git` on branch `master`.
 
 ## Pending
 
-- Decide whether to commit or keep JOJO-Codex as an untracked review artifact.
+- Decide later whether to install skills globally or copy project-local versions
+  into C3/CPU/Kru-Kwansit workspaces.
