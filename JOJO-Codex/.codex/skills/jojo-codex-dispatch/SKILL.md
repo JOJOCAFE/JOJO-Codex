@@ -27,6 +27,24 @@ description: Dispatch protocol for routing JOJO-Codex tasks to specialist roles.
 5. Chain dependent tasks: architect -> implementer -> verifier -> repo-steward.
 6. Reconcile outputs centrally before final reporting.
 
+## Codex Sub-Agent Mapping
+
+JOJO-Codex role names are prompts and contracts. They are not live processes by
+default. Spawn a Codex sub-agent only when the user explicitly asks for agents,
+delegation, or parallel work.
+
+Use the runtime agent type by task shape:
+
+| Need | Codex agent type | JOJO-Codex role prompt |
+|---|---|---|
+| bounded read-only codebase question | `explorer` | coordinator, architect, verifier, or specialist as needed |
+| bounded file edit or production task | `worker` | firmware-coder, cpu-hardware-coder, toolsmith, source-doc-writer, repo-steward |
+| independent verification while implementation continues | `worker` or `explorer` | verifier |
+
+Every spawned agent prompt must include role, exact task, current source files,
+allowed writes, done criteria, expected evidence, and a warning that other work
+may be happening in the workspace.
+
 ## Dispatch Template
 
 Use this shape when handing off:
@@ -38,6 +56,7 @@ Context: <files, constraints, current state>
 Allowed writes: <paths or none>
 Verify: <agent or command>
 Done means: <observable evidence>
+Codex runtime: <main thread | explorer | worker>
 ```
 
 ## Escalation

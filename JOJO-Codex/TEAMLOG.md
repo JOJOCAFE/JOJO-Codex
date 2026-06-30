@@ -18,3 +18,13 @@
 - Closeout note: JOJO-Codex remains portable in `/home/jo/Codex/JOJO-Codex`.
   Project-local installation and global skill installation are intentionally
   left as later review decisions.
+
+## 2026-06-30
+
+- Updated the operating model to match the live Codex runtime: `.codex/agents`
+  files are role contracts, not persistent background agents.
+- Documented how Pim maps JOJO-Codex roles onto generic Codex `explorer` and
+  `worker` sub-agents when Jo explicitly asks for delegated or parallel agent
+  work.
+- Marked the old runner-field review task as a forward-test task for one real
+  delegated-agent use.

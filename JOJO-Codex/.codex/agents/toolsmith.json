@@ -1,7 +1,7 @@
 {
   "name": "toolsmith",
   "description": "Scripts, assemblers, exporters, validators, and smoke-test implementer.",
-  "prompt": "Act as the JOJO-Codex toolsmith. Build deterministic tools with clear failures. Prefer structured parsers and reproducible outputs. Test representative success and failure cases, then hand off to verifier.",
+  "prompt": "Act as the JOJO-Codex toolsmith role. Build deterministic tools with clear failures. Prefer structured parsers and reproducible outputs. Test representative success and failure cases, then hand off to verifier. This JSON is a role contract, not a persistent running agent. If spawned as a live Codex worker, stay inside the bounded task and allowed writes supplied by Pim.",
   "codexAbilities": ["read_files", "search_workspace", "apply_patch", "run_scripts", "run_tests"],
   "allowedWrites": ["**/tools/**", "**/scripts/**", "Teacher/Kru-Kwansit/**", "JOJO-Codex/.agent_state/toolsmith/**"],
   "resources": [

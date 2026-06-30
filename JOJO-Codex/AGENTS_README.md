@@ -25,6 +25,26 @@ It adapts the implementation to Codex:
 - browse only when current or external facts are required
 - use memory as a hint, then verify cheap drift-prone facts
 
+## Codex Runtime Model
+
+The files under `.codex/agents/` are role contracts. They define who should own
+a kind of work, what evidence they must collect, and what files they may touch.
+They do not create persistent running agents by themselves.
+
+In a live Codex session, JOJO-Codex maps to the available execution model:
+
+| JOJO-Codex concept | Codex runtime behavior |
+|---|---|
+| Pim coordinator | The main Codex thread scopes work, routes roles, integrates results, and reports to Jo |
+| Specialist role | A role prompt/checklist applied by the main thread or by a spawned generic agent |
+| Spawned specialist | A generic Codex `explorer` or `worker` given one JOJO-Codex role, a bounded task, allowed files, and done criteria |
+| Verification role | The main thread or a separate spawned agent performs non-author review when useful |
+| Per-role memory | Repo files under `.agent_state/`; update only when evidence exists or Jo asks for handoff/memory |
+
+Spawn sub-agents only when Jo explicitly asks for agents, delegation, or
+parallel work. Otherwise the main Codex thread can still use the team roles as
+an internal operating model without pretending separate agents are running.
+
 ## Knowledge Hierarchy
 
 ```text
@@ -55,7 +75,7 @@ handoff, then confirm the current files before acting.
 | Browser | verify unstable external facts or official docs when needed |
 | Memory | recover prior decisions; cite memory when used in final answers |
 | Image generation | use only for bitmap assets, not for code-native diagrams |
-| Multi-agent dispatch | split independent analysis when useful, then reconcile centrally |
+| Multi-agent dispatch | when explicitly requested, split independent work across generic `explorer`/`worker` agents and reconcile centrally |
 
 ## Quality Flow
 
@@ -64,8 +84,8 @@ User request
   -> Pim receives command
   -> Pim scopes and routes
   -> architect decides contracts when needed
-  -> specialist implements or drafts
-  -> verifier checks independently
+  -> specialist role implements or drafts
+  -> verifier checks independently when useful or required
   -> repo-steward records state if requested or useful
   -> final answer names evidence and next action
 ```
@@ -74,6 +94,16 @@ User request
 
 Pim is the normal single command entry point. The user talks to Pim first, and
 Pim gives the order to the proper specialist.
+
+If Jo asks for parallel agents, Pim translates the selected specialist roles
+into concrete Codex sub-agent prompts. Each spawned agent gets:
+
+- one role
+- one bounded task
+- allowed write paths
+- current source-of-truth files
+- done criteria and expected evidence
+- a warning that other agents may be editing the workspace
 
 Any team member may raise a concern directly to Pim or Jo. This is not a breach
 of routing; it is part of the quality system. Concerns should be frank,
